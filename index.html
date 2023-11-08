@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Superpower Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+<body>
+<!-- Nav Bar -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" >What is your superpower?</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="https://github.com/Rastifer/silver-chainsaw-hotel-jrast">Source Code</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="https://gist.github.com/barrycumbie/892372aa45634b0a28b7354ea076bac6">Hotel Story Card</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="https://validator.w3.org/nu/?doc=https%3A%2F%2Frastifer.github.io%2Fsilver-chainsaw-hotel-jrast%2F">Validity Checker</a>
+            </li>
+            <li class="navitem"><button id="btnLoadData" class="btn btn-secondary">Load Sample Info</button></li>
+        </ul>
+    </nav>
+
+<!-- Form Title -->
+<div class="row">
+    <div id="titleBar" class="offset-md-3 col-md-8 mx-auto text-center">
+        <h1>IT'S TIME TO CHOOSE YOUR SUPERPOWER!</h1>
+        
+    </div>
+</div>
+<br>
+<!-- Name Entries -->
+<div class="row">
+    <div class="col-md-6 offset-md-3 card mt-3">
+         <form>
+            <h3>But first, let's get some of your information</h3>
+        <div class="mb-3 mt-3">
+          <label for="fname" class="form-label">First Name:</label>
+          <input type="text" class="form-control" id="fname" placeholder="Enter your first name..." name="fname">
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="lname" class="form-label">Last Name:</label>
+            <input type="text" class="form-control" id="lname" placeholder="Enter your last name..." name="fname">
+          </div>
+<!-- Email and Password -->
+        <div class="mb-3 mt-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email address..." name="email">
+          </div>
+        <div class="mb-3 mt-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter your password..." name="pwd">
+        </div>
+
+<!-- Phone Number  -->
+        <div class="mb-3 mt-3">
+            <label for="phone" class="form-label">Phone Number:</label>
+            <input type="tel" class="form-control" id="phone" placeholder="(###) ###-####" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+            
+        </div>
+    <br>
+
+    <!-- Birthday -->
+    
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday">
+    <br>
+    <br>
+
+    <!-- Additional Information -->
+    <div class="form-group">
+        <label for="addinfo">Additional Information:</label>
+        <textarea class="form-control" rows="5" id="addinfo"></textarea>
+    </div>
+    <br>
+
+    <!-- Question1 -->
+    <h4>Now a few questions to see what superpower you would have!</h4>     
+    <p><strong>Q1. Do you like to swim?</strong></p>
+    <input type="radio" id="yes" name="q1" value="Yes">
+    <label for="yes">Yes, I love swimming!</label><br>
+    <input type="radio" id="no" name="q1" value="No">
+    <label for="no">No, I hate swimming.</label><br>
+    <input type="radio" id="kinda" name="q1" value="Kinda">
+    <label for="kinda">Eh, kinda.</label><br>
+    <br>
+
+    <!-- Question 2 -->
+    <p><strong>Q2. Which animal do you connect with most?</strong>
+    <div class="row">
+        <div class="col-25">
+            <label for="animalType" class="form-label">Select an animal type</label>
+            <select id="animalType" name="animalType">
+                <option value="" disabled selected>Select an Animal</option>
+                <option value="dog">Dog</option>
+                <option value="bird">Bird</option>
+                <option value="bear">Bear</option>
+                <option value="cat">Cat</option>
+                <option value="insect">Insect</option>
+            </select>
+            <hr />
+            <label for="animal" class="form-label">Animal</label>
+            <select id="animal" class="form-select" type="select" name="animal" disabled>
+                <option>&#x1F446 Choose an animal type first</option>
+            </select>
+        </div>
+    </div>
+    <br>
+
+    <!-- Question 3 -->
+    <p><strong>Q3. What is your favorite color?</strong></p> 
+    <input type="color" id="favColor" name="favColor"><br> 
+    <br>
+
+    <!-- Question 4 -->
+    <p><strong>Q4. Which combination of super powers best describes your personality? (3 choices max)</strong></p>
+    <label>
+        <input type="checkbox" name="superpower" value="flight">Flight
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="superpower" value="invisibility">Invisibility
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="superpower" value="superstrength">Super Strength
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="superpower" value="teleportation">Teleportation
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="superpower" value="healing">Healing
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="superpower" value="shapeshifting">Shapeshifting
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="superpower" value="superspeed">Super Speed
+    </label>
+    <br>
+    <br>
+
+
+    <!-- Submit and Clear Button -->
+    <div class="button">
+        <input id="submitForm" type="submit" value="Submit" class="btn btn-primary" onclick="this.disabled = true">
+        <input type="reset" value="Clear" class="btn btn-secondary">
+    </div>
+    <div id="dataContainer">
+
+    </div>
+</form>
+</div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script/script.js"></script>
+<script src="script/ajax.js"></script>
+</body>
+
+</html>

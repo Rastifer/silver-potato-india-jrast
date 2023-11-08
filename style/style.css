@@ -1,0 +1,26 @@
+body {
+    background-image: conic-gradient(red, yellow, green, blue, black);
+
+}
+
+h1 {
+    color: white;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+input[type=reset] {
+    background-color: gray;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
